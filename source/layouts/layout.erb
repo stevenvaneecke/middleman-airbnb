@@ -5,6 +5,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title %></title>
     <%= stylesheet_link_tag "application" %>
@@ -12,6 +15,8 @@
     <%= favicon_tag 'images/favicon.png' %>
   </head>
   <body>
+    <%= partial "layouts/navbar.html.erb" %>
     <%= yield %>
+    <%= partial "layouts/footer.html.erb" %>
   </body>
 </html>
